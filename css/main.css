@@ -15,7 +15,6 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--white);
-    color: var(--black);
 }
 
 a {
@@ -41,8 +40,10 @@ a {
 
 .header {
     position: relative;
+    overflow: hidden;
     padding-top: 44px;
     min-height: 940px;
+    color: #FFFFFF;
     background: linear-gradient(132.053deg, #428E5F 0%, #112120 100%), linear-gradient(#204434, #204434);
 }
 
@@ -63,6 +64,8 @@ a {
 }
 
 .header__content {
+    position: relative;
+    z-index: 1;
     max-width: 592px;
 }
 
@@ -76,6 +79,95 @@ a {
 
 .header__list {
     display: flex;
-    justify-content: space-between;
     gap: 80px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header__list a {
+    position: relative;
+}
+
+.header__list a.active::after,
+.header__list a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 10px;
+    bottom: -7px;
+    display: block;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #C4C4C4;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
+    gap: 68px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 44px;
+    background: linear-gradient(129.542deg, #FF7B4E 0%, #FF584E 100%), linear-gradient(#FFFFFF, #FFFFFF);
+    border-radius: 100px;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Header row */
+
+.header__row {
+    display: flex;
+}
+
+/* Header content */
+
+.header__badge {
+    margin-bottom: 7px;
+    display: inline-block;
+    padding: 11px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.header__title {
+    margin-bottom: 30px;
+    font-size: 55px;
+}
+
+.header__text {
+    margin-bottom: 68px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header__btn {
+    padding: 27px 47px;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 27px;
+}
+
+.header__img {
+    position: relative;
+    flex-grow: 1;
+}
+
+.header__img img {
+    position: absolute;
+    top: -180px;
+    right: -95px;
+    max-width: unset;
+    width: 894px;
+    height: 940px;
 }
